@@ -7,7 +7,7 @@ const HomePage = () => {
       <div className="navBar" />
       <div className="middleNav">
         <div className="logo">
-          <b className="clicon">Al Aamri</b>
+          <b className="clicon">AlAamri</b>
         </div>
         <div className="searchForAnythingParent">
           <div className="searchForAnything">Search for anything...</div>
@@ -58,39 +58,39 @@ const HomePage = () => {
               <div className="computerLaptop">Gaming Accessories</div>
             </div>
             <div className="category3">
-              <img className="imageIcon" alt="Laptops" src="assets/Image.png" />
+              <img className="imageIcon" alt="Laptops" src="assets/Image1.png" />
               <div className="computerLaptop">Laptops</div>
             </div>
             <div className="category3">
-              <img className="imageIcon" alt="Monitors" src="assets/Image.png" />
+              <img className="imageIcon" alt="Monitors" src="assets/Image2.png" />
               <div className="computerLaptop">Monitors</div>
             </div>
             <div className="category3">
-              <img className="imageIcon" alt="Accessories" src="assets/Image.png" />
+              <img className="imageIcon" alt="Accessories" src="assets/Image3.png" />
               <div className="computerLaptop">Accessories</div>
             </div>
             <div className="category3">
-              <img className="imageIcon" alt="Desktops" src="assets/Image.png" />
+              <img className="imageIcon" alt="Desktops" src="assets/Image4.png" />
               <div className="computerLaptop">Desktops</div>
             </div>
             <div className="category3">
-              <img className="imageIcon" alt="Switches" src="assets/Image.png" />
+              <img className="imageIcon" alt="Switches" src="assets/Image5.png" />
               <div className="computerLaptop">Switches</div>
             </div>
             <div className="category3">
-              <img className="imageIcon" alt="Routers" src="assets/Image.png" />
+              <img className="imageIcon" alt="Routers" src="assets/Image6.png" />
               <div className="computerLaptop">Routers</div>
             </div>
             <div className="category3">
-              <img className="imageIcon" alt="Projectors" src="assets/Image.png" />
+              <img className="imageIcon" alt="Projectors" src="assets/Image7.png" />
               <div className="computerLaptop">Projectors</div>
             </div>
             <div className="category3">
-              <img className="imageIcon" alt="Printers" src="assets/Image.png" />
+              <img className="imageIcon" alt="Printers" src="assets/Image8.png" />
               <div className="computerLaptop">Printers</div>
             </div>
             <div className="category3">
-              <img className="imageIcon" alt="Toners" src="assets/Image.png" />
+              <img className="imageIcon" alt="Toners" src="assets/Image9.png" />
               <div className="computerLaptop">Toners</div>
             </div>
           </div>
