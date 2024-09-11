@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inder:wght@400&display=swap');
+
+body {
+    margin: 0;
+    line-height: normal;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.navBar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 224px;
+}
+
+.clicon {
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 40px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchForAnything {
+    width: 100%;
+    max-width: 578px;
+    position: relative;
+    line-height: 20px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.regularmagnifyingglassIcon {
+    width: 20px;
+    position: relative;
+    height: 20px;
+}
+
+.searchForAnythingParent {
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 14px 20px;
+    gap: 8px;
+    font-size: 14px;
+    color: #77878f;
+    width: 100%;
+    max-width: 600px;
+}
+
+.regularuserIcon {
+    width: 32px;
+    position: relative;
+    height: 32px;
+}
+
+.middleNav {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: #101010;
+    width: 100%;
+    height: 224px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.label {
+    position: relative;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.regularcaretdownIcon {
+    width: 16px;
+    position: relative;
+    height: 16px;
+}
+
+.button {
+    border-radius: 2px;
+    background-color: #f2f4f5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    gap: 8px;
+}
+
+.button1 {
+    border-radius: 2px;
+    background-color: #f2f4f5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+}
+
+.regularphonecallIcon {
+    width: 28px;
+    position: relative;
+    height: 28px;
+}
+
+.div {
+    position: relative;
+    line-height: 24px;
+}
+
+.callNow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 18px;
+}
+
+.bottomNav {
+    position: relative;
+    top: 0;
+    box-shadow: 0px -1px 0px #e4e7e9 inset;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #191c1f;
+}
+
+.heroSection {
+    position: relative;
+    top: 305px;
+    left: 0px;
+    background: linear-gradient(123.24deg, #91309c, #321136);
+    border-bottom: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+}
+
+.monitorIcon {
+    position: absolute;
+    top: 735px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 676px;
+    height: auto;
+    object-fit: cover;
+}
+
+.highDefinitionMonitors {
+    position: relative;
+    letter-spacing: -0.03em;
+    line-height: 120%;
+    font-weight: 900;
+    text-shadow: 447px 0px 125px rgba(0, 0, 0, 0), 286px 0px 114px rgba(0, 0, 0, 0.01), 161px 0px 97px rgba(0, 0, 0, 0.05), 72px 0px 72px rgba(0, 0, 0, 0.09), 18px 0px 39px rgba(0, 0, 0, 0.1);
+}
+
+.experienceCrystalClearVisua {
+    margin: 0;
+}
+
+.experienceCrystalClearVisuaContainer {
+    width: 100%;
+    max-width: 481px;
+    position: relative;
+    font-size: 32px;
+    letter-spacing: -0.03em;
+    line-height: 120%;
+    font-family: Inder;
+    display: inline-block;
+}
+
+.primaryButton {
+    width: 100%;
+    max-width: 405px;
+    border-radius: 30px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    font-size: 18px;
+    color: #571f59;
+    font-family: Inder;
+}
+
+.frameParent {
+    position: relative;
+    top: 568px;
+    left: 0;
+    width: 100%;
+    max-width: 1035px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.shopWithCategories {
+    width: 100%;
+    max-width: 1320px;
+    line-height: 40px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.category3 {
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #e4e7e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 12px;
+    gap: 16px;
+}
+
+.category2 {
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mainSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+    gap: 42px;
+    text-align: center;
+    font-size: 12px;
+    color: #77878f;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.product {
+    flex: 1;
+    position: relative;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #e4e7e9;
+    box-sizing: border-box;
+    height: auto;
+    overflow: hidden;
+}
+
+.newsletter {
+    background-color: #191c1f;
+    padding: 72px 20px;
+    box-sizing: border-box;
+    gap: 32px;
+    text-align: center;
+}
+
+.input {
+    width: 100%;
+    max-width: 424px;
+    border-radius: 2px;
+    background-color: #fff;
+    height: 48px;
+    margin: auto;
+}
+
+.inputField {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.footerMain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background-color: #191c1f;
+    color: #adb7bc;
+}
+
+.footer1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.topCategory {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+}
+
+.copyright {
+    text-align: center;
+    color: #adb7bc;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .middleNav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .bottomNav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .frameParent {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product {
+        flex-basis: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .primaryButton {
+        font-size: 16px;
+        height: 50px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .monitorIcon {
+        width: 100%;
+        height: auto;
+    }
+
+    .inputField {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer1,
+    .topCategory {
+        text-align: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .newsletter {
+        padding: 40px 10px;
+    }
+}
