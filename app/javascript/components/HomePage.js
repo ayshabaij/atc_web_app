@@ -1,7 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'; // Add useState and useEffect to the import
+import axios from 'axios';  // Import axios for making API calls
 import './HomePage.css'; // Import your plain CSS file
 
 const HomePage = () => {
+  const [categories, setCategories] = useState([]); // State to store categories
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State to manage dropdown visibility
+
+  // Fetch categories from the API when the component mounts
+ useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get('/api/categories');
+        setCategories(response.data);
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+      }
+    };
+    fetchCategories();
+  }, []);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest(".category")) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Function to toggle dropdown visibility
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <div className="homePage">
       <div className="navBar" />
@@ -18,10 +54,17 @@ const HomePage = () => {
       <div className="bottomNav">
         <div className="logo">
           <div className="category">
-            <div className="button">
+            <div className="button" onClick={toggleDropdown}>
               <div className="label">All Category</div>
               <img className="regularcaretdownIcon" alt="Dropdown" src="assets/Regular/CaretDown.svg" />
             </div>
+            {isDropdownOpen && (  
+              <ul className="dropdown-menu">
+                {categories.map(category => (
+                  <li key={category.id}>{category.name}</li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
         <div className="logo">

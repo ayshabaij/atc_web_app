@@ -82,6 +82,31 @@ body {
     gap: 258px;
 }
 
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px; /* You can adjust the width as per your design */
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f2f2f2;
+}
+
+
 .label {
     position: relative;
     line-height: 20px;
