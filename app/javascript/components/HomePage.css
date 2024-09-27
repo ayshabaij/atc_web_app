@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inder:wght@400&display=swap');
+
 body {
-    margin: 0; line-height: normal;
+    margin: 0;
+    padding: 0;
+    font-family: 'Public Sans', sans-serif;
+    line-height: normal;
 }
+
+/* Navigation Bar */
 .navBar {
     position: absolute;
     top: 0px;
@@ -12,17 +18,20 @@ body {
     width: 100%;
     height: 224px;
 }
+
 .clicon {
     position: relative;
     letter-spacing: -0.02em;
     line-height: 40px;
 }
+
 .logo {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
+
 .searchForAnything {
     width: 578px;
     position: relative;
@@ -30,11 +39,13 @@ body {
     display: inline-block;
     flex-shrink: 0;
 }
+
 .regularmagnifyingglassIcon {
     width: 20px;
     position: relative;
     height: 20px;
 }
+
 .searchForAnythingParent {
     box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08);
     border-radius: 2px;
@@ -48,11 +59,13 @@ body {
     font-size: 14px;
     color: #77878f;
 }
+
 .regularuserIcon {
     width: 32px;
     position: relative;
     height: 32px;
 }
+
 .middleNav {
     position: absolute;
     top: 0px;
@@ -68,16 +81,19 @@ body {
     box-sizing: border-box;
     gap: 258px;
 }
+
 .label {
     position: relative;
     line-height: 20px;
     font-weight: 500;
 }
+
 .regularcaretdownIcon {
     width: 16px;
     position: relative;
     height: 16px;
 }
+
 .button {
     position: absolute;
     top: 0px;
@@ -91,11 +107,13 @@ body {
     padding: 14px 24px;
     gap: 8px;
 }
+
 .category {
     width: 154px;
     position: relative;
     height: 48px;
 }
+
 .button1 {
     position: absolute;
     top: 0px;
@@ -108,15 +126,18 @@ body {
     justify-content: center;
     padding: 14px 24px;
 }
+
 .regularphonecallIcon {
     width: 28px;
     position: relative;
     height: 28px;
 }
+
 .div {
     position: relative;
     line-height: 24px;
 }
+
 .callNow {
     display: flex;
     flex-direction: row;
@@ -125,6 +146,7 @@ body {
     gap: 8px;
     font-size: 18px;
 }
+
 .bottomNav {
     position: absolute;
     top: 224px;
@@ -141,6 +163,8 @@ body {
     font-size: 14px;
     color: #191c1f;
 }
+
+/* Hero Section */
 .heroSection {
     position: absolute;
     top: 305px;
@@ -151,6 +175,7 @@ body {
     width: 100%;
     height: 1027px;
 }
+
 .monitorIcon {
     position: absolute;
     top: 735px;
@@ -159,17 +184,19 @@ body {
     height: 489px;
     object-fit: cover;
 }
+
 .highDefinitionMonitors {
     align-self: stretch;
     position: relative;
     letter-spacing: -0.03em;
     line-height: 120%;
     font-weight: 900;
-    text-shadow: 447px 0px 125px rgba(0, 0, 0, 0), 286px 0px 114px rgba(0, 0, 0, 0.01), 161px 0px 97px rgba(0, 0, 0, 0.05), 72px 0px 72px rgba(0, 0, 0, 0.09), 18px 0px 39px rgba(0, 0, 0, 0.1);
 }
+
 .experienceCrystalClearVisua {
     margin: 0;
 }
+
 .experienceCrystalClearVisuaContainer {
     width: 481px;
     position: relative;
@@ -179,6 +206,7 @@ body {
     font-family: Inder;
     display: inline-block;
 }
+
 .highDefinitionMonitorsParent {
     align-self: stretch;
     display: flex;
@@ -187,11 +215,13 @@ body {
     justify-content: flex-start;
     gap: 20px;
 }
+
 .exploreMonitors {
     position: relative;
     letter-spacing: -0.03em;
     line-height: 120%;
 }
+
 .primaryButton {
     width: 405px;
     border-radius: 30px;
@@ -208,6 +238,7 @@ body {
     color: #571f59;
     font-family: Inder;
 }
+
 .frameParent {
     position: absolute;
     top: 568px;
@@ -222,6 +253,7 @@ body {
     font-size: 72px;
     font-family: 'Inknut Antiqua';
 }
+
 .shopWithCategories {
     width: 100%;
     position: relative;
@@ -229,12 +261,14 @@ body {
     font-weight: 600;
     display: inline-block;
 }
+
 .imageIcon {
     width: 148px;
     position: relative;
     height: 148px;
     object-fit: cover;
 }
+
 .computerLaptop {
     width: 181px;
     position: relative;
@@ -242,6 +276,7 @@ body {
     font-weight: 500;
     display: inline-block;
 }
+
 .category3 {
     border-radius: 4px;
     background-color: #fff;
@@ -253,6 +288,7 @@ body {
     padding: 24px 12px;
     gap: 16px;
 }
+
 .item {
     display: flex;
     flex-direction: row;
@@ -260,6 +296,7 @@ body {
     justify-content: flex-start;
     font-size: 16px;
 }
+
 .category2 {
     align-self: stretch;
     overflow-x: auto;
@@ -270,6 +307,7 @@ body {
     padding: 0px 44px;
     gap: 40px;
 }
+
 .assembledPcs {
     align-self: stretch;
     position: relative;
@@ -279,6 +317,7 @@ body {
     color: #191c1f;
     text-align: center;
 }
+
 .imageIcon10 {
     position: absolute;
     top: 16px;
@@ -287,16 +326,19 @@ body {
     height: 172px;
     object-fit: cover;
 }
+
 .star {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
 }
+
 .div1 {
     position: relative;
     line-height: 16px;
 }
+
 .starParent {
     display: flex;
     flex-direction: row;
@@ -304,6 +346,7 @@ body {
     justify-content: flex-start;
     gap: 4px;
 }
+
 .dell215Inch {
     width: 202px;
     position: relative;
@@ -313,11 +356,13 @@ body {
     color: #333638;
     display: inline-block;
 }
+
 .div2 {
     position: relative;
     line-height: 20px;
     font-weight: 900;
 }
+
 .price {
     display: flex;
     flex-direction: row;
@@ -326,6 +371,7 @@ body {
     font-size: 24px;
     color: #000;
 }
+
 .content {
     position: absolute;
     top: 212px;
@@ -336,11 +382,13 @@ body {
     justify-content: flex-start;
     gap: 8px;
 }
+
 .hot {
     position: relative;
     line-height: 16px;
     font-weight: 600;
 }
+
 .badge {
     position: absolute;
     top: 12px;
@@ -354,6 +402,7 @@ body {
     padding: 5px 10px;
     color: #fff;
 }
+
 .product {
     flex: 1;
     position: relative;
@@ -364,6 +413,7 @@ body {
     height: 418px;
     overflow: hidden;
 }
+
 .row {
     width: 984px;
     display: flex;
@@ -372,6 +422,7 @@ body {
     justify-content: flex-start;
     gap: 16px;
 }
+
 .mainSection {
     display: flex;
     flex-direction: column;
@@ -383,6 +434,7 @@ body {
     font-size: 12px;
     color: #77878f;
 }
+
 .categoryParent {
     position: absolute;
     top: 1424px;
@@ -396,6 +448,7 @@ body {
     text-align: center;
     color: #191c1f;
 }
+
 .praesentFringillaErat {
     width: 536px;
     position: relative;
@@ -404,6 +457,7 @@ body {
     display: inline-block;
     opacity: 0.7;
 }
+
 .content8 {
     display: flex;
     flex-direction: column;
@@ -411,12 +465,14 @@ body {
     justify-content: center;
     gap: 12px;
 }
+
 .emailAddress {
     position: absolute;
     top: calc(50% - 12px);
     left: 16px;
     line-height: 24px;
 }
+
 .input {
     width: 424px;
     position: relative;
@@ -424,12 +480,14 @@ body {
     background-color: #fff;
     height: 48px;
 }
+
 .label2 {
     position: relative;
     letter-spacing: 0.01em;
     line-height: 48px;
     text-transform: uppercase;
 }
+
 .button2 {
     border-radius: 2px;
     background-color: #000;
@@ -442,6 +500,7 @@ body {
     font-size: 14px;
     color: #fff;
 }
+
 .inputField {
     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.12);
     border-radius: 3px;
@@ -456,6 +515,7 @@ body {
     font-size: 16px;
     color: #77878f;
 }
+
 .newsletter {
     align-self: stretch;
     background-color: #191c1f;
@@ -468,12 +528,14 @@ body {
     box-sizing: border-box;
     gap: 32px;
 }
+
 .customerSupports {
     width: 312px;
     position: relative;
     line-height: 20px;
     display: inline-block;
 }
+
 .div17 {
     width: 312px;
     position: relative;
@@ -483,6 +545,7 @@ body {
     color: #fff;
     display: inline-block;
 }
+
 .phoneNumber {
     display: flex;
     flex-direction: column;
@@ -491,6 +554,7 @@ body {
     gap: 4px;
     font-size: 14px;
 }
+
 .washingtonAveManchester {
     width: 248px;
     position: relative;
@@ -498,6 +562,7 @@ body {
     color: #adb7bc;
     display: inline-block;
 }
+
 .infokinbocom {
     width: 312px;
     position: relative;
@@ -506,6 +571,7 @@ body {
     color: #fff;
     display: inline-block;
 }
+
 .contactInfo {
     display: flex;
     flex-direction: column;
@@ -515,6 +581,7 @@ body {
     font-size: 16px;
     color: #77878f;
 }
+
 .cliconEcommerce {
     display: flex;
     flex-direction: column;
@@ -522,6 +589,7 @@ body {
     justify-content: center;
     gap: 24px;
 }
+
 .topCategory1 {
     width: 200px;
     position: relative;
@@ -530,6 +598,7 @@ body {
     font-weight: 500;
     display: inline-block;
 }
+
 .footerLinks {
     display: flex;
     flex-direction: row;
@@ -537,6 +606,7 @@ body {
     justify-content: flex-start;
     padding: 6px 0px;
 }
+
 .devider {
     width: 26px;
     position: relative;
@@ -544,6 +614,7 @@ body {
     box-sizing: border-box;
     height: 2px;
 }
+
 .footerLinks3 {
     display: flex;
     flex-direction: row;
@@ -553,6 +624,7 @@ body {
     gap: 8px;
     color: #fff;
 }
+
 .button3 {
     background-color: #191c1f;
     display: flex;
@@ -563,6 +635,7 @@ body {
     gap: 8px;
     color: #e7e7e7;
 }
+
 .item1 {
     display: flex;
     flex-direction: column;
@@ -571,6 +644,7 @@ body {
     font-size: 14px;
     color: #929fa5;
 }
+
 .topCategory {
     display: flex;
     flex-direction: column;
@@ -579,6 +653,7 @@ body {
     gap: 12px;
     font-size: 16px;
 }
+
 .footer1 {
     position: absolute;
     height: 85.59%;
@@ -596,6 +671,7 @@ body {
     box-sizing: border-box;
     gap: 24px;
 }
+
 .kinboEcommerce {
     width: 1320px;
     position: relative;
@@ -603,6 +679,7 @@ body {
     display: inline-block;
     flex-shrink: 0;
 }
+
 .copyright {
     position: absolute;
     height: 14.41%;
@@ -623,12 +700,14 @@ body {
     font-size: 14px;
     color: #adb7bc;
 }
+
 .footer {
     align-self: stretch;
     position: relative;
     height: 472px;
     text-align: left;
 }
+
 .footerMain {
     position: absolute;
     bottom: 0px;
@@ -640,6 +719,7 @@ body {
     justify-content: center;
     text-align: center;
 }
+
 .indicatorsChild {
     width: 8px;
     position: relative;
@@ -647,6 +727,7 @@ body {
     background-color: #000;
     height: 8px;
 }
+
 .indicatorsItem {
     width: 8px;
     position: relative;
@@ -654,6 +735,7 @@ body {
     background-color: #c4c4c4;
     height: 8px;
 }
+
 .indicators {
     position: absolute;
     top: 1240px;
@@ -667,6 +749,8 @@ body {
     box-sizing: border-box;
     gap: 8px;
 }
+
+/* Homepage */
 .homePage {
     width: 100%;
     position: relative;
@@ -678,3 +762,206 @@ body {
     font-family: 'Public Sans';
 }
 
+/* Responsive CSS */
+
+/* Small Devices (Mobiles) */
+@media (max-width: 768px) {
+  .navBar, .middleNav, .bottomNav, .heroSection {
+    padding: 10px;
+  }
+  
+  .middleNav {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .searchForAnythingParent {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .callNow {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .heroSection {
+    height: auto;
+    padding: 20px;
+  }
+
+  .monitorIcon {
+    width: 100%;
+    height: auto;
+  }
+
+  .frameParent {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .categoryParent {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .category3 {
+    width: 100%;
+  }
+
+  .item {
+    flex-wrap: wrap;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .inputField {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .newsletter {
+    padding: 20px;
+  }
+
+  .footerMain {
+    padding: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .product {
+    width: 100%;
+  }
+
+  .starParent {
+    flex-wrap: wrap;
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+  .middleNav {
+    padding: 15px 30px;
+  }
+
+  .searchForAnythingParent {
+    width: 100%;
+  }
+
+  .callNow {
+    font-size: 16px;
+  }
+
+  .heroSection {
+    height: auto;
+    padding: 30px;
+  }
+
+  .monitorIcon {
+    width: 100%;
+    height: auto;
+  }
+
+  .frameParent {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .categoryParent {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .category3 {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  .item {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer {
+    padding: 20px;
+  }
+
+  .inputField {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .newsletter {
+    padding: 40px;
+  }
+
+  .footerMain {
+    padding: 40px;
+  }
+
+  .row {
+    flex-direction: row;
+  }
+
+  .product {
+    width: 45%;
+  }
+
+  .starParent {
+    flex-wrap: wrap;
+  }
+}
+
+/* Large Devices (Laptops and Desktops) */
+@media (min-width: 1024px) {
+  .middleNav, .bottomNav, .footer {
+    padding: 40px 300px;
+  }
+
+  .searchForAnythingParent {
+    width: 50%;
+  }
+
+  .callNow {
+    font-size: 18px;
+  }
+
+  .heroSection {
+    height: 1027px;
+  }
+
+  .monitorIcon {
+    width: 676px;
+    height: 489px;
+  }
+
+  .frameParent {
+    width: 1035px;
+  }
+
+  .categoryParent {
+    width: 1512px;
+  }
+
+  .category3 {
+    width: 154px;
+  }
+
+  .item {
+    gap: 16px;
+  }
+
+  .row {
+    flex-direction: row;
+  }
+
+  .product {
+    width: 23%;
+  }
+}
