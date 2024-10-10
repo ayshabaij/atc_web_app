@@ -1,0 +1,106 @@
+<!-- app/views/admin/admin_users/new.html.erb -->
+<div class="admin-signup-container">
+  <h1>Admin Sign Up</h1>
+
+  <%= form_with(model: @admin_user, url: admin_admin_users_path, local: true) do |f| %>
+    <div class="form-group">
+      <%= f.label :email, "Email" %>
+      <%= f.email_field :email, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password, "Password" %>
+      <%= f.password_field :password, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password_confirmation, "Confirm Password" %>
+      <%= f.password_field :password_confirmation, class: "form-control" %>
+    </div>
+
+    <%= f.submit "Sign Up", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+<style>
+  /* Admin Sign Up Form Styles */
+.admin-signup-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08);
+    font-family: 'Public Sans', sans-serif;
+    color: #333638;
+    text-align: left;
+}
+
+.admin-signup-container h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+    color: #191c1f;
+}
+
+.admin-signup-container .form-group {
+    margin-bottom: 20px;
+}
+
+.admin-signup-container .form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #191c1f;
+}
+
+.admin-signup-container .form-group .form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #e4e7e9;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #333638;
+}
+
+.admin-signup-container .form-group .form-control:focus {
+    border-color: #91309c;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(145, 48, 156, 0.2);
+}
+
+.admin-signup-container .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #91309c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.admin-signup-container .btn-primary:hover {
+    background-color: #7c2783;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .admin-signup-container {
+        padding: 15px;
+    }
+    
+    .admin-signup-container h1 {
+        font-size: 28px;
+    }
+}
+
+</style>
