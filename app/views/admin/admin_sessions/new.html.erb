@@ -1,0 +1,126 @@
+<!-- app/views/admin/admin_sessions/new.html.erb -->
+<div class="admin-login-container">
+  <h1>Admin Login</h1>
+
+  <%= form_with(url: admin_login_path, local: true) do |form| %>
+    <div class="form-group">
+      <%= form.label :email, "Email" %>
+      <%= form.text_field :email, class: "form-control", autofocus: true %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :password, "Password" %>
+      <%= form.password_field :password, class: "form-control" %>
+    </div>
+
+    <div class="form-actions">
+      <%= form.submit "Log in", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+
+  <div class="back-link">
+    <%= link_to "Back to Home", root_path %>
+  </div>
+</div>
+
+
+<style type="text/css">
+  /* Admin Login Form Styles */
+.admin-login-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08);
+    font-family: 'Public Sans', sans-serif;
+    color: #333638;
+    text-align: left;
+}
+
+.admin-login-container h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+    color: #191c1f;
+}
+
+.admin-login-container .form-group {
+    margin-bottom: 20px;
+}
+
+.admin-login-container .form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #191c1f;
+}
+
+.admin-login-container .form-group .form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #e4e7e9;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #333638;
+}
+
+.admin-login-container .form-group .form-control:focus {
+    border-color: #91309c;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(145, 48, 156, 0.2);
+}
+
+.admin-login-container .form-actions {
+    margin-top: 20px;
+}
+
+.admin-login-container .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #91309c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.admin-login-container .btn-primary:hover {
+    background-color: #7c2783;
+}
+
+.admin-login-container .back-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.admin-login-container .back-link a {
+    font-size: 14px;
+    color: #91309c;
+    text-decoration: none;
+}
+
+.admin-login-container .back-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .admin-login-container {
+        padding: 15px;
+    }
+    
+    .admin-login-container h1 {
+        font-size: 28px;
+    }
+}
+</style>
