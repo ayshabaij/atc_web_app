@@ -394,6 +394,18 @@ const HomePage = () => {
         <div className="indicatorsItem" />
         <div className="indicatorsItem" />
       </div>
+      {/* WhatsApp Chat Button */}
+      <a
+        href="https://wa.me/9562423431" // Replace with your WhatsApp number
+        className="whatsapp-chat"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="assets/whatsapp-icon.png" // Replace with the path to your WhatsApp icon
+          alt="Chat with us on WhatsApp"
+        />
+      </a>
     </div>
   );
 };
