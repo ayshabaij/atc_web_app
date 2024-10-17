@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'; // Add useState and useEffect to the import
 import axios from 'axios';  // Import axios for making API calls
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import './HomePage.css'; // Import your plain CSS file
 
 const HomePage = () => {
@@ -37,6 +40,51 @@ const HomePage = () => {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
+  // Slider settings for the carousel
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+  };
+
+  // Sample slides (replace with your actual content)
+  const slides = [
+    {
+      title: "High-Definition Monitors",
+      description: "Experience crystal-clear visuals with our top-of-the-line monitors, perfect for both work and play.",
+      imageSrc: "assets/Monitor.png",
+      cta: "Explore Monitors"
+    },
+    {
+      title: "Versatile Laptops",
+      description: "Find the perfect laptop for your needs, whether it's for work, gaming, or anything in between.",
+      imageSrc: "assets/image 1.png",
+      cta: "Explore Laptops"
+    },
+    {
+      title: "Powerful Gaming PCs",
+      description: "Unleash your gaming potential with our powerful PCs, built for ultimate performance.",
+      imageSrc: "assets/image 7.png",
+      cta: "Explore Gaming PCs"
+    },
+    {
+      title: "Essential Accessories",
+      description: "Enhance your setup with essential accessories, from keyboards to monitors and more.",
+      imageSrc: "assets/image 5.png",
+      cta: "Explore Accessories"
+    },
+    {
+      title: "Reliable Routers",
+      description: "Stay connected with our high-performance routers, ensuring smooth and fast internet access.",
+      imageSrc: "assets/image 6.png",
+      cta: "Explore Routers"
+    }
+  ];
 
   return (
     <div className="homePage">
@@ -79,19 +127,25 @@ const HomePage = () => {
           <div className="div">+966-</div>
         </div>
       </div>
-      <div className="heroSection" />
-      <img className="monitorIcon" alt="Monitor" src="assets/Monitor.png" />
-      <div className="frameParent">
-        <div className="highDefinitionMonitorsParent">
-          <div className="highDefinitionMonitors">High-Definition Monitors</div>
-          <div className="experienceCrystalClearVisuaContainer">
-            <p className="experienceCrystalClearVisua">Experience crystal-clear visuals with our top-of-the-line monitors, perfect for both work and play.</p>
+      <Slider {...sliderSettings}>
+        {slides.map((slide, index) => (
+          <div key={index} className="heroSection">
+            {/* Display the background image */}
+            <img className="monitorIcon" alt={slide.title} src={slide.imageSrc} />
+            <div className="frameParent">
+              <div className="highDefinitionMonitorsParent">
+                <div className="highDefinitionMonitors">{slide.title}</div>
+                <div className="experienceCrystalClearVisuaContainer">
+                  <p className="experienceCrystalClearVisua">{slide.description}</p>
+                </div>
+              </div>
+              <div className="primaryButton">
+                <div className="exploreMonitors">{slide.cta}</div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="primaryButton">
-          <div className="exploreMonitors">Explore Monitors</div>
-        </div>
-      </div>
+        ))}
+      </Slider>
       <div className="categoryParent">
         <div className="category2">
           <div className="shopWithCategories">Shop with Categories</div>
@@ -386,13 +440,6 @@ const HomePage = () => {
             <div className="kinboEcommerce" />
           </div>
         </div>
-      </div>
-      <div className="indicators">
-        <div className="indicatorsChild" />
-        <div className="indicatorsItem" />
-        <div className="indicatorsItem" />
-        <div className="indicatorsItem" />
-        <div className="indicatorsItem" />
       </div>
       {/* WhatsApp Chat Button */}
       <a
