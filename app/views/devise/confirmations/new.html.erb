@@ -1,16 +1,102 @@
 <h2>Resend confirmation instructions</h2>
 
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="resend-confirmation-container">
+  <div class="resend-confirmation-form">
+    <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Resend confirmation instructions" %>
+      </div>
+
+    <% end %>
+
+    <%= render "devise/shared/links" %>
   </div>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
-  </div>
-<% end %>
+<style type="text/css">
+  /* Resend confirmation form styling */
+.resend-confirmation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Center the form vertically */
+  background: linear-gradient(123.24deg, #91309c, #321136); /* Match homepage gradient */
+}
 
-<%= render "devise/shared/links" %>
+.resend-confirmation-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align form elements to the left */
+}
+
+.resend-confirmation-form h2 {
+  text-align: center;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: #571f59;
+  margin-bottom: 24px;
+}
+
+.resend-confirmation-form .field {
+  margin-bottom: 20px;
+}
+
+.resend-confirmation-form label {
+  display: block;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #321136;
+  margin-bottom: 8px;
+}
+
+.resend-confirmation-form input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #191c1f;
+}
+
+.resend-confirmation-form .actions input[type="submit"] {
+  width: 100%;
+  background-color: #571f59;
+  color: white;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resend-confirmation-form .actions input[type="submit"]:hover {
+  background-color: #91309c;
+}
+
+.resend-confirmation-form a {
+  color: #571f59;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  margin-top: 20px;
+}
+
+.resend-confirmation-form a:hover {
+  text-decoration: underline;
+}
+</style>

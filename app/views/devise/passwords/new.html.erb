@@ -1,16 +1,120 @@
 <h2>Forgot your password?</h2>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="forgot-password-container">
+  <div class="forgot-password-form">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Send me reset password instructions" %>
+      </div>
+
+    <% end %>
+
+    <div class="links-inline">
+      <%= link_to "Login", new_session_path(resource_name) %> |
+      <%= link_to "Sign up", new_registration_path(resource_name) %>
+    </div>
   </div>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
+<style type="text/css">
+  /* Forgot password form styling */
+.forgot-password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Center the form vertically */
+  background: linear-gradient(123.24deg, #91309c, #321136); /* Match homepage gradient */
+}
 
-<%= render "devise/shared/links" %>
+.forgot-password-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Left-align form elements */
+}
+
+.forgot-password-form h2 {
+  text-align: center;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: #571f59;
+  margin-bottom: 24px;
+}
+
+.forgot-password-form .field {
+  margin-bottom: 20px;
+}
+
+.forgot-password-form label {
+  display: block;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #321136;
+  margin-bottom: 8px;
+}
+
+.forgot-password-form input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #191c1f;
+}
+
+.forgot-password-form .actions input[type="submit"] {
+  width: 100%;
+  background-color: #571f59;
+  color: white;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.forgot-password-form .actions input[type="submit"]:hover {
+  background-color: #91309c;
+}
+
+.forgot-password-form a {
+  color: #571f59;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password-form a:hover {
+  text-decoration: underline;
+}
+
+/* Style to make login and sign-up appear on the same line */
+.links-inline {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.links-inline a {
+  display: inline-block;
+  color: #571f59;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 0 5px; /* Add some space between the links */
+}
+
+.links-inline a:hover {
+  text-decoration: underline;
+}
+</style>
