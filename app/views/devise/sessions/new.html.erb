@@ -1,26 +1,181 @@
 <h2>Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<div class="login-container">
+  <div class="login-form">
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+    <!-- Error messages or flash alerts block -->
+    <% if flash[:alert] %>
+      <div class="flash-alert error-messages">
+        <h2 class="error-heading">Error</h2>
+        <ul class="error-list">
+          <li><%= flash[:alert] %></li>
+        </ul>
+      </div>
+    <% end %>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %>
+        <%= f.password_field :password, autocomplete: "current-password" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field checkbox-field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Log in" %>
+      </div>
+
+    <% end %>
+
+    <div class="links">
+      <%= link_to "Sign up", new_registration_path(resource_name) %> | 
+      <%= link_to "Forgot your password?", new_password_path(resource_name) %>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
+</div>
 
-<%= render "devise/shared/links" %>
+
+<style type="text/css">
+/* Error Messages Styling */
+.error-messages {
+  background-color: #f8d7da; /* Light red background */
+  color: #721c24; /* Dark red text */
+  border: 1px solid #f5c6cb; /* Red border */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.error-heading {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.error-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.error-list li {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 14px;
+  color: #721c24;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.error-list li:before {
+  content: "•";
+  color: #f5c6cb;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Log in form styling */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(123.24deg, #91309c, #321136);
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.login-form h2 {
+  text-align: center;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: #571f59;
+  margin-bottom: 24px;
+}
+
+.login-form .field {
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  display: block;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #321136;
+  margin-bottom: 8px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #191c1f;
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkbox-field input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.login-form .actions input[type="submit"] {
+  width: 100%;
+  background-color: #571f59;
+  color: white;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form .actions input[type="submit"]:hover {
+  background-color: #91309c;
+}
+
+.links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.links a {
+  color: #571f59;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+</style>

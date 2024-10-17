@@ -1,43 +1,172 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="edit-account-container">
+  <div class="edit-account-form">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <div class="field">
+        <div class="password-label">
+          <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
+          <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %>
+        </div>
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
+        <%= f.password_field :current_password, autocomplete: "current-password" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Update" %>
+      </div>
     <% end %>
+
+    <%= link_to "Back", :back %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="cancel-account">
+    <h3>Cancel my account</h3>
+    <div>
+      Unhappy? 
+      <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %>
+    </div>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
+<style type="text/css">
+  /* Edit account form styling */
+.edit-account-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(123.24deg, #91309c, #321136);
+}
 
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
+.edit-account-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Left-align form elements */
+}
 
-<h3>Cancel my account</h3>
+.edit-account-form h2 {
+  text-align: center;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: #571f59;
+  margin-bottom: 24px;
+}
 
-<div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
+.edit-account-form .field {
+  margin-bottom: 20px;
+}
 
-<%= link_to "Back", :back %>
+.edit-account-form label {
+  display: block;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #321136;
+  margin-bottom: 8px;
+}
+
+.password-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #321136;
+}
+
+.password-label em {
+  font-size: 14px;
+  color: #77878f;
+  margin-left: 8px;
+}
+
+.edit-account-form input[type="email"],
+.edit-account-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #191c1f;
+}
+
+.edit-account-form .actions input[type="submit"] {
+  width: 100%;
+  background-color: #571f59;
+  color: white;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-account-form .actions input[type="submit"]:hover {
+  background-color: #91309c;
+}
+
+.edit-account-form a {
+  color: #571f59;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  margin-top: 20px;
+}
+
+.edit-account-form a:hover {
+  text-decoration: underline;
+}
+
+.cancel-account {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #571f59;
+}
+
+.cancel-account .button_to {
+  display: inline-block;
+  background-color: #91309c;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-account .button_to:hover {
+  background-color: #571f59;
+}
+</style>

@@ -1,25 +1,111 @@
 <h2>Change your password</h2>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-  <%= f.hidden_field :reset_password_token %>
+<div class="change-password-container">
+  <div class="change-password-form">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
 
-  <div class="field">
-    <%= f.label :password, "New password" %><br />
-    <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+      <%= f.hidden_field :reset_password_token %>
+
+      <div class="field">
+        <%= f.label :password, "New password" %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation, "Confirm new password" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Change my password" %>
+      </div>
+
     <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= render "devise/shared/links" %>
   </div>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Change my password" %>
-  </div>
-<% end %>
+<style type="text/css">
+  /* Change password form styling */
+.change-password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Center the form vertically */
+  background: linear-gradient(123.24deg, #91309c, #321136); /* Match homepage gradient */
+}
 
-<%= render "devise/shared/links" %>
+.change-password-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align form elements to the left */
+}
+
+.change-password-form h2 {
+  text-align: center;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: #571f59;
+  margin-bottom: 24px;
+}
+
+.change-password-form .field {
+  margin-bottom: 20px;
+}
+
+.change-password-form label {
+  display: block;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #321136;
+  margin-bottom: 8px;
+}
+
+.change-password-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #191c1f;
+}
+
+.change-password-form .actions input[type="submit"] {
+  width: 100%;
+  background-color: #571f59;
+  color: white;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.change-password-form .actions input[type="submit"]:hover {
+  background-color: #91309c;
+}
+
+.change-password-form a {
+  color: #571f59;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  margin-top: 20px;
+}
+
+.change-password-form a:hover {
+  text-decoration: underline;
+}
+</style>
