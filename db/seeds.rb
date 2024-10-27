@@ -1,3 +1,10 @@
+# Clear all existing data in the categories table
+Category.delete_all
+
+# Reset the primary key sequence to start from 1
+ActiveRecord::Base.connection.reset_pk_sequence!('categories')
+
+# Seed new data into the categories table
 Category.create(name: "Gaming Accessories", description: "Gaming Accessories category")
 Category.create(name: "Laptops", description: "Laptops category")
 Category.create(name: "Monitors", description: "Monitors category")

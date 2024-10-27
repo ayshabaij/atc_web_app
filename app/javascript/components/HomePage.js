@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'; // Add useState and useEffect to the import
 import axios from 'axios';  // Import axios for making API calls
 import Slider from "react-slick";
+import { useNavigate } from 'react-router-dom';  // Import for navigation
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './HomePage.css'; // Import your plain CSS file
@@ -86,6 +87,20 @@ const HomePage = () => {
     }
   ];
 
+  // Predefined images for categories
+  const categoryImages = [
+    "assets/Image.png", // Gaming Accessories
+    "assets/Image1.png", // Laptops
+    "assets/Image2.png", // Monitors
+    "assets/Image3.png", // Accessories
+    "assets/Image4.png", // Desktops
+    "assets/Image5.png", // Switches
+    "assets/Image6.png", // Routers
+    "assets/Image7.png", // Projectors
+    "assets/Image8.png", // Printers
+    "assets/Image9.png", // Toners
+  ];
+
   return (
     <div className="homePage">
       <div className="navBar" />
@@ -146,52 +161,25 @@ const HomePage = () => {
           </div>
         ))}
       </Slider>
+
       <div className="categoryParent">
         <div className="category2">
           <div className="shopWithCategories">Shop with Categories</div>
           <div className="item">
-            <div className="category3">
-              <img className="imageIcon" alt="Gaming Accessories" src="assets/Image.png" />
-              <div className="computerLaptop">Gaming Accessories</div>
-            </div>
-            <div className="category3">
-              <img className="imageIcon" alt="Laptops" src="assets/Image1.png" />
-              <div className="computerLaptop">Laptops</div>
-            </div>
-            <div className="category3">
-              <img className="imageIcon" alt="Monitors" src="assets/Image2.png" />
-              <div className="computerLaptop">Monitors</div>
-            </div>
-            <div className="category3">
-              <img className="imageIcon" alt="Accessories" src="assets/Image3.png" />
-              <div className="computerLaptop">Accessories</div>
-            </div>
-            <div className="category3">
-              <img className="imageIcon" alt="Desktops" src="assets/Image4.png" />
-              <div className="computerLaptop">Desktops</div>
-            </div>
-            <div className="category3">
-              <img className="imageIcon" alt="Switches" src="assets/Image5.png" />
-              <div className="computerLaptop">Switches</div>
-            </div>
-            <div className="category3">
-              <img className="imageIcon" alt="Routers" src="assets/Image6.png" />
-              <div className="computerLaptop">Routers</div>
-            </div>
-            <div className="category3">
-              <img className="imageIcon" alt="Projectors" src="assets/Image7.png" />
-              <div className="computerLaptop">Projectors</div>
-            </div>
-            <div className="category3">
-              <img className="imageIcon" alt="Printers" src="assets/Image8.png" />
-              <div className="computerLaptop">Printers</div>
-            </div>
-            <div className="category3">
-              <img className="imageIcon" alt="Toners" src="assets/Image9.png" />
-              <div className="computerLaptop">Toners</div>
-            </div>
+            {/* Map through categories and pair with static images */}
+            {categories.map((category, index) => (
+              <div className="category3" key={category.id}>
+                <img
+                  className="imageIcon"
+                  alt={category.name}
+                  src={categoryImages[index % categoryImages.length]} // Use static images in a loop
+                />
+                <div className="computerLaptop">{category.name}</div>
+              </div>
+            ))}
           </div>
         </div>
+
         <div className="mainSection">
           <div className="assembledPcs">Assembled PC’s</div>
           <div className="row">
